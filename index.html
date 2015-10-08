@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Example Page </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+
+    <!-- include 3 following -->
+    <link rel="stylesheet" href="css/modal-form-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+
+  </head>
+  <body>
+<h3>Click for contact form</h3><br>
+
+<button href="#contact-modal" class="modal-trigger button-primary"> Touch me </button><br><br>
+
+<p>A <a href="#contact-modal" class="modal-trigger"> link</a> works too, just make sure you set the class-attribute to "modal-trigger" and the href-attribute to the <i>id of your modal</i>.</p>
+
+
+
+<!-- Modal : Contact -->
+
+<div id="contact-modal">
+  <h3> Official contact form 101 </h3>
+  <form id="contact-form" name="contact-form" method="post" action="mailer.php">
+
+    <label for"contact-name"> Name </label>
+    <input type="text" name="contact-name" class="u-full-width">
+
+    <label for="contact-reason">Reason for contacting</label>
+    <select name="contact-reason" class="u-full-width">
+      <option value="Option 1">Questions</option>
+      <option value="Option 2">Admiration</option>
+      <option value="Option 3">Can I get your number?</option>
+    </select>
+
+    <label for="contact-body">Can you tell me a little story? </label>
+    <textarea name="contact-body" rows="4" cols="50" class="u-full-width"></textarea>
+
+    <br>
+
+    <label for="contact-email"> Email address </label>
+    <input type="email" name="contact-email" class="u-full-width">
+     
+    <input type="submit" name="contact-send" class="contact-send button-primary" value="send">
+
+    <div id="form-messages"></div>
+
+  </form>
+</div>
+
+<!-- include these too -->
+<script src="js/app.js"></script>
+<script src="js/ajax_send_mail.js"></script>
+<?php require 'mailer.php';?>
+
+  </body>
+
+</html>
+

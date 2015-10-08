@@ -1,0 +1,1 @@
+$(".modal-trigger").leanModal({ top : 120, overlay : 0.75, closeButton: ".modal_close" });;

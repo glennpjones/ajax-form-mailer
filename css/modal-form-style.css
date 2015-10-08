@@ -1,0 +1,50 @@
+body {
+  padding: 100px;
+}
+
+p {
+  max-width: 350px;
+}
+
+#lean_overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: black;
+  display: none; 
+}
+
+#contact-modal {
+  display: none;
+  width: 500px;
+  background: #fff;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+#contact-form {
+  margin-bottom: none;
+}
+
+#form-messages {
+  display: inline-block;
+  text-align: left;
+  line-height: 1.4;
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+
+.success {
+  margin-top: 10px;
+  color: #87d37c;
+  background: rgba(135, 211, 124, 0.2); 
+}
+
+.error {
+  margin-top: 10px;
+  color: rgba(217, 30, 23, 0.8);
+  background: rgba(217, 30, 23, 0.2);
+}
